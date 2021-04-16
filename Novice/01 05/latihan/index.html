@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  padding: 10px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.container {
+
+  margin-left: 100px;
+  margin-right:100px;
+  justify-content: center;
+  max-width: 1500px;
+  background-color: #ddd;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+    <navbar></navbar>
+    <div class="container">
+        <h1>Praxis Academy</h1>
+        <p>Hari ini belajar komponen Vue.js</p>
+
+        <input v-model="pesan" placeholder="edit saya">
+        <p>Pesan nya adalah : {{ pesan }}</p>
+
+        <span>Pesan dari Multiline adalah:</span>
+        <p style="white-space: pre-line;">{{ pesan }}</p>
+        <br>
+        <textarea v-model="pesan" placeholder="Tambahkan pesan"></textarea>
+        <footer-komponen></footer-komponen>
+        <button-counter></button-counter>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
